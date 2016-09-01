@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Matter World</title>
+    <link href="css/matter-tools.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+<body onload="start();">
+
+<span class="hide" tabindex="0">Hide</span>/<span class="show" tabindex="0">Show</span> Graph
+<div id="game-container"></div>
+
+<div class="rewardContainer">
+    <div id="flotreward"></div>
+</div>
+
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flot/0.8.3/jquery.flot.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/3.0.11/pixi.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.5.1/dat.gui.min.js"></script>
+<script src="https://cdn.rawgit.com/schteppe/poly-decomp.js/master/build/decomp.js"></script>
+
+<script src="js/external/matter.js"></script>
+<!--<script src="js/external/gif.js"></script>-->
+<!--<script src="js/external/matter-tools.js"></script>-->
+<script src="js/external/rl.js"></script>
+<script src="js/ui/Dat.js"></script>
+
+<script src="js/graphing/FlotGraph.js"></script>
+<script src="js/Utility.js"></script>
+<script src="js/Vec.js"></script>
+<script src="js/entities/Wall.js"></script>
+<script src="js/grid/Cell.js"></script>
+<script src="js/grid/Grid.js"></script>
+<script src="js/grid/Hex.js"></script>
+<script src="js/grid/HexShape.js"></script>
+<script src="js/grid/HexGrid.js"></script>
+<script src="js/Maze.js"></script>
+<script src="js/MatterPixi.js"></script>
+
+<script src="js/entities/PhysicalEntity.js"></script>
+<script src="js/entities/PhysicalAgent.js"></script>
+<script src="js/MatterWorld.js"></script>
+
+<script>
+    var world = world || {};
+
+    function start() {
+        world = new MatterWorld();
+        world.setViewport(100, 100);
+        datGUI(world);
+    }
+</script>
+</body>
+</html>

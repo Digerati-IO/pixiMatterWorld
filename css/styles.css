@@ -1,0 +1,81 @@
+
+html, body {
+    height: 100%;
+    /* Needed if you want to use height: 100% within the body tag */
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+button, input, optgroup, select, textarea {
+    color: black;
+}
+
+.rewardContainer {
+    background-color: rgba(226, 226, 226, 0.47);
+    border: .07em solid rgba(0,0,0,.5);
+    border-radius: .5em;
+    box-sizing: border-box;
+    color: #000;
+    display: none;
+    margin: 1em auto;
+    padding: 1em 2em;
+    width: 550px;
+}
+
+.hide:focus ~ .rewardContainer {
+    display: none;
+}
+
+.show:focus ~ .rewardContainer {
+    display: block;
+}
+
+#flotreward {
+    width: 500px;
+    height: 300px;
+}
+
+#game-container {
+    height: 60%;
+    width: 80%;
+    text-align: center;
+    font-size: 0;
+}
+
+#game-container:after {
+    /* Create a pseudo-element after 'game-container' div */
+    content: ''; /* Required attribute of pseudo-element */
+    width: 0; /* Force it to have no width */
+    height: 100%; /* Make full height of container */
+}
+
+#game-container:after, #game-container #world {
+    display: inline-block; /* Force these elements to behave like text, but allow width and height */
+    vertical-align: middle; /* Vertically align text WITH OTHER TEXT SIBLINGS (hence the pseudo-element) */
+}
+
+@-ms-viewport {
+    width: 100vw ;
+    zoom: 100% ;
+}
+
+@viewport {
+    width: 100vw ;
+    zoom: 100% ;
+}
+
+@-ms-viewport {
+    user-zoom: fixed ;
+}
+
+@viewport {
+    user-zoom: fixed ;
+}
+
+/*@-ms-viewport { user-zoom: zoom ; min-zoom: 100% ; max-zoom: 200% ; }   @viewport { user-zoom: zoom ; min-zoom: 100% ; max-zoom: 200% ; }*/
